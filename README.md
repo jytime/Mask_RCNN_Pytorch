@@ -7,8 +7,8 @@ Compared with other PyTor implementations, this repository has the following fea
 * It supports multi-image batch training (i.e., batch size >1).
 * It supports PyTorch 0.4.0.
 * It supports both GPU and CPU. You can use a CPU to visualize the results.
-* People could train Mask R-CNN on their own dataset (please see [synthia.py](https://github.com/jytime/Mask_RCNN_Pytorch/blob/master/synthia.py)).
-* People could use a model pre-trained on COCO or ImageNet to segment objects in their own images (please see [demo_coco.py](https://github.com/jytime/Mask_RCNN_Pytorch/blob/master/demo_coco.py) or [demo_synthia.py](https://github.com/jytime/Mask_RCNN_Pytorch/blob/master/demo_synthia.py)).
+* You could train Mask R-CNN on your own dataset. You could start the training from the pre-trained models (please see [synthia.py](https://github.com/jytime/Mask_RCNN_Pytorch/blob/master/synthia.py)).
+* You could use a model pre-trained on COCO or ImageNet to segment objects in your own images (please see [demo_coco.py](https://github.com/jytime/Mask_RCNN_Pytorch/blob/master/demo_coco.py) or [demo_synthia.py](https://github.com/jytime/Mask_RCNN_Pytorch/blob/master/demo_synthia.py)).
 
 
 
