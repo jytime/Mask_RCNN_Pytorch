@@ -56,7 +56,7 @@ The instructions come from lasseha's repository.
 
 ## Results(COCO)
 The training and evaluation is based on COCO Dataset 2014. To understand the indicators below, please have a look at [pycocotools](https://github.com/cocodataset/cocoapi/tree/master/PythonAPI/pycocotools).
-Notably, I only used one GTX 1080 (Ti). I think the performance could be improved if more GPUs available.
+Notably, I only used one GTX 1080 (Ti). I think the performance could be improved if more GPUs are available.
 
 
  |       Indicator        |       IoU            | area   |        maxDets         | Value|
