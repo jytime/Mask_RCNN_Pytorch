@@ -58,17 +58,18 @@ Some of the instrctions come from lasseha's repository.
 The training and evaluation is based on COCO Dataset 2014. 
 
 
- |       Indicator        |                   Condition                    | Value|
- |       :--:             |                   :--:                         | :--: |
- |Average Precision  (AP) | @[ IoU=0.50:0.95 , area=   all , maxDets=100 ] | 0.372|
- |Average Precision  (AP) | @[ IoU=0.50      , area=   all , maxDets=100 ] | 0.554|
- |Average Precision  (AP) | @[ IoU=0.75      , area=   all , maxDets=100 ] | 0.414|
- |Average Precision  (AP) | @[ IoU=0.50:0.95 , area= small , maxDets=100 ] | 0.179|
- |Average Precision  (AP) | @[ IoU=0.50:0.95 , area=medium , maxDets=100 ] | 0.428|
- |Average Precision  (AP) | @[ IoU=0.50:0.95 , area= large , maxDets=100 ] | 0.555|
- |Average Recall     (AR) | @[ IoU=0.50:0.95 , area=   all , maxDets=  1 ] | 0.301|
- |Average Recall     (AR) | @[ IoU=0.50:0.95 , area=   all , maxDets= 10 ] | 0.425|
- |Average Recall     (AR) | @[ IoU=0.50:0.95 , area=   all , maxDets=100 ] | 0.437|
- |Average Recall     (AR) | @[ IoU=0.50:0.95 , area= small , maxDets=100 ] | 0.211|
- |Average Recall     (AR) | @[ IoU=0.50:0.95 , area=medium , maxDets=100 ] | 0.488|
- |Average Recall     (AR) | @[ IoU=0.50:0.95 , area= large , maxDets=100 ] | 0.625|
+ |       Indicator        |       IoU            | area   |        maxDets         | Value|
+ |       :--:             |                 :--: | :--:   |:--:                    | :--: |
+ |Average Precision  (AP) | 0.50:0.95            |   all  | 100                    | 0.372|
+ |Average Precision  (AP) | 0.50                 |  all   | 100                    | 0.554|
+ |Average Precision  (AP) | 0.75                 |   all  | 100  | 0.414|
+ |Average Precision  (AP) | 0.50:0.95            | small  | 100  | 0.179|
+ |Average Precision  (AP) | 0.50:0.95            | medium | 100  | 0.428|
+ |Average Precision  (AP) | 0.50:0.95            | large  | 100  | 0.555|
+ |Average Recall     (AR) | 0.50:0.95            |   all  | 1  | 0.301|
+ |Average Recall     (AR) | 0.50:0.95            |   all  | 10  | 0.425|
+ |Average Recall     (AR) | 0.50:0.95            |  all   | 100  | 0.437|
+ |Average Recall     (AR) | 0.50:0.95            | small  | 100  | 0.211|
+ |Average Recall     (AR) | 0.50:0.95            | medium | 100  | 0.488|
+ |Average Recall     (AR) | 0.50:0.95            | large  | 100  | 0.625|
+ 
