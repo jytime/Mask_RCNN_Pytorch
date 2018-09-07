@@ -14,13 +14,13 @@ Compared with other PyTor implementations, this repository has the following fea
 
 ## Requirements
 * Python 3
-* PyTorch 0.4
+* PyTorch 0.4.0
 * matplotlib, scipy, skimage, h5py, numpy
 
 ## Demo
-### Trained on [Synthia Dataset](http://synthia-dataset.net/)
+### [Synthia Dataset](http://synthia-dataset.net/)
 
-### Trained on [COCO dataset](http://cocodataset.org/#home)
+### [COCO dataset](http://cocodataset.org/#home)
 
 ## Compilation
 Some of the instrctions come from lasseha's repository.
