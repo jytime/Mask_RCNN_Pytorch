@@ -3,13 +3,17 @@
 This is an implementation of the instance segmentation model [Mask R-CNN](https://arxiv.org/abs/1703.06870) on Pytorch, based on the previous work of [Matterport](https://github.com/matterport/Mask_RCNN) and [lasseha](https://github.com/multimodallearning/pytorch-mask-rcnn).  Matterport's repository is an implementation on Keras and TensorFlow while lasseha's repository is an implementation on Pytorch.
 
 ## Features
-This implementation has the following features:
+Compared with other PyTor implementations, this repository has the following features:
+* It supports multi-image batch training (i.e., batch size >1).
+* It supports PyTorch 0.4.0
+* People could train Mask R-CNN on their own dataset (please see *synthia.py*)
+* People could use a model pre-trained on COCO or ImageNet to segment objects in their own images (please see *demo_coco.py* or *demo_synthia.py*).
 
 
 
 ## Requirements
 * Python 3
-* Pytorch 0.4
+* PyTorch 0.4
 * matplotlib, scipy, skimage, h5py, numpy
 
 ## Compilation
@@ -29,7 +33,7 @@ Some of the instrctions come from lasseha's repository.
         cd ../../
         
          
-    where arch is determined by your GPU model: 
+    where 'arch' is determined by your GPU model: 
     
     | GPU  | TitanX | GTX 960M | GTX 1070 | GTX 1080 (Ti) |
     | :--: | :--:   | :--:     | :--:     | :--: |
