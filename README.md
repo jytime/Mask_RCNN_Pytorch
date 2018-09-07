@@ -54,22 +54,23 @@ Some of the instrctions come from lasseha's repository.
         ln -s /path/to/coco/cocoapi/PythonAPI/pycocotools/ pycocotools
 * The pretrained models on COCO and ImageNet are available [here](https://drive.google.com/open?id=1LXUgC2IZUYNEoXr05tdqyKFZY0pZyPDc).  
 
-## Results
-The training and evaluation is based on COCO Dataset 2014. 
+## Results(COCO)
+The training and evaluation is based on COCO Dataset 2014. To understand the indicators below, please have a look at [pycocotools](https://github.com/cocodataset/cocoapi/tree/master/PythonAPI/pycocotools)
+Notably, I only used one GTX 1080 (Ti). I think the performance could be improved if more GPUs available.
 
 
  |       Indicator        |       IoU            | area   |        maxDets         | Value|
  |       :--:             |                 :--: | :--:   |:--:                    | :--: |
- |Average Precision  (AP) | 0.50:0.95            |   all  | 100                    | 0.372|
- |Average Precision  (AP) | 0.50                 |  all   | 100                    | 0.554|
- |Average Precision  (AP) | 0.75                 |   all  | 100  | 0.414|
- |Average Precision  (AP) | 0.50:0.95            | small  | 100  | 0.179|
- |Average Precision  (AP) | 0.50:0.95            | medium | 100  | 0.428|
- |Average Precision  (AP) | 0.50:0.95            | large  | 100  | 0.555|
- |Average Recall     (AR) | 0.50:0.95            |   all  | 1  | 0.301|
- |Average Recall     (AR) | 0.50:0.95            |   all  | 10  | 0.425|
- |Average Recall     (AR) | 0.50:0.95            |  all   | 100  | 0.437|
- |Average Recall     (AR) | 0.50:0.95            | small  | 100  | 0.211|
- |Average Recall     (AR) | 0.50:0.95            | medium | 100  | 0.488|
- |Average Recall     (AR) | 0.50:0.95            | large  | 100  | 0.625|
+ |Average Precision  (AP) | 0.50:0.95            |   all  | 100                    | 0.392|
+ |Average Precision  (AP) | 0.50                 |  all   | 100                    | 0.574|
+ |Average Precision  (AP) | 0.75                 |   all  | 100                    | 0.434|
+ |Average Precision  (AP) | 0.50:0.95            | small  | 100  | 0.199|
+ |Average Precision  (AP) | 0.50:0.95            | medium | 100  | 0.448|
+ |Average Precision  (AP) | 0.50:0.95            | large  | 100  | 0.575|
+ |Average Recall     (AR) | 0.50:0.95            |   all  | 1  | 0.321|
+ |Average Recall     (AR) | 0.50:0.95            |   all  | 10  | 0.445|
+ |Average Recall     (AR) | 0.50:0.95            |  all   | 100  | 0.457|
+ |Average Recall     (AR) | 0.50:0.95            | small  | 100  | 0.231|
+ |Average Recall     (AR) | 0.50:0.95            | medium | 100  | 0.508|
+ |Average Recall     (AR) | 0.50:0.95            | large  | 100  | 0.645|
  
