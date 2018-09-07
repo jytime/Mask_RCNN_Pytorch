@@ -53,3 +53,22 @@ Some of the instrctions come from lasseha's repository.
 
         ln -s /path/to/coco/cocoapi/PythonAPI/pycocotools/ pycocotools
 * The pretrained models on COCO and ImageNet are available [here](https://drive.google.com/open?id=1LXUgC2IZUYNEoXr05tdqyKFZY0pZyPDc).  
+
+## Results
+The training and evaluation is based on COCO Dataset 2014. 
+
+
+ |       Indicator        |                   Condition                    | Value|
+ |       :--:             |                   :--:                         | :--: |
+ |Average Precision  (AP) | @[ IoU=0.50:0.95 , area=   all , maxDets=100 ] | 0.372|
+ |Average Precision  (AP) | @[ IoU=0.50      , area=   all , maxDets=100 ] | 0.554|
+ |Average Precision  (AP) | @[ IoU=0.75      , area=   all , maxDets=100 ] | 0.414|
+ |Average Precision  (AP) | @[ IoU=0.50:0.95 , area= small , maxDets=100 ] | 0.179|
+ |Average Precision  (AP) | @[ IoU=0.50:0.95 , area=medium , maxDets=100 ] | 0.428|
+ |Average Precision  (AP) | @[ IoU=0.50:0.95 , area= large , maxDets=100 ] | 0.555|
+ |Average Recall     (AR) | @[ IoU=0.50:0.95 , area=   all , maxDets=  1 ] | 0.301|
+ |Average Recall     (AR) | @[ IoU=0.50:0.95 , area=   all , maxDets= 10 ] | 0.425|
+ |Average Recall     (AR) | @[ IoU=0.50:0.95 , area=   all , maxDets=100 ] | 0.437|
+ |Average Recall     (AR) | @[ IoU=0.50:0.95 , area= small , maxDets=100 ] | 0.211|
+ |Average Recall     (AR) | @[ IoU=0.50:0.95 , area=medium , maxDets=100 ] | 0.488|
+ |Average Recall     (AR) | @[ IoU=0.50:0.95 , area= large , maxDets=100 ] | 0.625|
