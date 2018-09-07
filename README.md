@@ -21,6 +21,7 @@ Compared with other PyTor implementations, this repository has the following fea
 ### [Synthia Dataset](http://synthia-dataset.net/)
 
 <img src="assets/synthia.jpeg" width="80%" height="80%">
+
 ### [COCO dataset](http://cocodataset.org/#home)
 
 <img src="assets/coco.jpeg" width="50%" height="50%">
