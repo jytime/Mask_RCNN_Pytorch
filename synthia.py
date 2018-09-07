@@ -11,19 +11,19 @@ Written by Waleed Abdulla
 Usage:  run from the command line as such:
 
     # Train a new model starting from pre-trained COCO weights
-    python3 coco.py train --dataset=/path/to/coco/ --model=coco
+    python synthia.py train --dataset=/path/to/synthia/ --model=coco
 
     # Train a new model starting from ImageNet weights
-    python3 coco.py train --dataset=/path/to/coco/ --model=imagenet
+    python synthia.py train --dataset=/path/to/synthia/ --model=imagenet
 
     # Continue training a model that you had trained earlier
-    python3 coco.py train --dataset=/path/to/coco/ --model=/path/to/weights.h5
+    python synthia.py train --dataset=/path/to/synthia/ --model=/path/to/weights.h5
 
     # Continue training the last model you trained
-    python3 coco.py train --dataset=/path/to/coco/ --model=last
+    python synthia.py train --dataset=/path/to/synthia/ --model=last
 
-    # Run COCO evaluatoin on the last model you trained
-    python3 coco.py evaluate --dataset=/path/to/coco/ --model=last
+    # Run evaluatoin on the last model you trained
+    python synthia.py evaluate --dataset=/path/to/synthia/ --model=last
 """
 
 import os
@@ -180,22 +180,9 @@ class synthiaDataset(utils.Dataset):
 #        mask = [m for m in mask if set(np.unique(m).flatten()) != {0}]
         return mask.astype(np.bool), class_ids.astype(np.int32)
 
-
 ############################################################
 #  Training
 ############################################################
-
-def collate_custom(batch):
-    images = [item[0] for item in batch]
-    image_metas = [item[1] for item in batch]
-    rpn_match = [item[2] for item in batch]
-    rpn_bbox = [item[3] for item in batch]
-    gt_class_ids = [item[4] for item in batch]
-    gt_boxes = [item[5] for item in batch]
-    gt_masks = [item[6] for item in batch]
-
-    return [images, image_metas,rpn_match,rpn_bbox,gt_class_ids,gt_boxes,gt_masks]
-
 
 if __name__ == '__main__':
     import argparse
@@ -207,11 +194,12 @@ if __name__ == '__main__':
                         metavar="<command>",
                         help="'train' or 'evaluate' on Synthia")
     parser.add_argument('--dataset', required=False,
+                        default="/mnt/backup/jianyuan/synthia/RAND_CITYSCAPES/RGB",
                         metavar="/path/to/coco/",
-                        help='Directory of the MS-COCO dataset')
+                        help='Directory of the Synthia dataset')
     parser.add_argument('--model', required=False,
                         metavar="/path/to/weights.pth",
-                        help="Path to weights .pth file or 'coco'")
+                        help="Path to weights .pth file ")
     parser.add_argument('--logs', required=False,
                         default=DEFAULT_LOGS_DIR,
                         metavar="/mnt/backup/jianyuan/pytorch-mask-rcnn/logs",
@@ -274,6 +262,7 @@ if __name__ == '__main__':
         elif args.model.lower() == "imagenet":
             # Start from ImageNet trained weights
             model_path = config.IMAGENET_MODEL_PATH
+            # load pre-trained weights from coco or imagenet
             model.load_pre_weights(model_path)
         else:
             model_path = args.model
@@ -286,10 +275,9 @@ if __name__ == '__main__':
     print("Loading weights ", model_path)
     
 
-    data_dir="/mnt/backup/jianyuan/synthia/RAND_CITYSCAPES/RGB"
+    data_dir=args.dataset
     # Training dataset
     dataset_train = synthiaDataset()
-
     dataset_train.load_synthia(data_dir,"train")
     dataset_train.prepare()
 
