@@ -19,9 +19,12 @@ Compared with other PyTor implementations, this repository has the following fea
 
 ## Demo
 ### [Synthia Dataset](http://synthia-dataset.net/)
-<img src="assets/synthia.jpeg" width="50%" height="50%">
+
+<img src="assets/synthia.jpeg" width="80%" height="80%">
 ### [COCO dataset](http://cocodataset.org/#home)
+
 <img src="assets/coco.jpeg" width="50%" height="50%">
+
 ## Compilation
 Some of the instrctions come from lasseha's repository.
 * We use the [Non-Maximum Suppression](https://github.com/ruotianluo/pytorch-faster-rcnn) from ruotianluo and the [RoiAlign](https://github.com/longcw/RoIAlign.pytorch) from longcw. Please follow the instrctions below to build the functions.
