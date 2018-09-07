@@ -28,8 +28,8 @@ Compared with other PyTorch implementations, this repository has the following f
 <img src="assets/coco.jpeg" width="50%" height="50%">
 
 ## Compilation
-Some of the instrctions come from lasseha's repository.
-* We use the [Non-Maximum Suppression](https://github.com/ruotianluo/pytorch-faster-rcnn) from ruotianluo and the [RoiAlign](https://github.com/longcw/RoIAlign.pytorch) from longcw. Please follow the instrctions below to build the functions.
+The instructions come from lasseha's repository.
+* We use the [Non-Maximum Suppression](https://github.com/ruotianluo/pytorch-faster-rcnn) from ruotianluo and the [RoiAlign](https://github.com/longcw/RoIAlign.pytorch) from longcw. Please follow the instructions below to build the functions.
 
         cd nms/src/cuda/
         nvcc -c -o nms_kernel.cu.o nms_kernel.cu -x cu -Xcompiler -fPIC -arch=arch
@@ -55,7 +55,7 @@ Some of the instrctions come from lasseha's repository.
 * The pretrained models on COCO and ImageNet are available [here](https://drive.google.com/open?id=1LXUgC2IZUYNEoXr05tdqyKFZY0pZyPDc).  
 
 ## Results(COCO)
-The training and evaluation is based on COCO Dataset 2014. To understand the indicators below, please have a look at [pycocotools](https://github.com/cocodataset/cocoapi/tree/master/PythonAPI/pycocotools)
+The training and evaluation is based on COCO Dataset 2014. To understand the indicators below, please have a look at [pycocotools](https://github.com/cocodataset/cocoapi/tree/master/PythonAPI/pycocotools).
 Notably, I only used one GTX 1080 (Ti). I think the performance could be improved if more GPUs available.
 
 
