@@ -275,6 +275,16 @@ if __name__ == '__main__':
     print("Loading weights ", model_path)
     
 
+    # For Multi-gpu training, please uncomment the following part
+    # Notably, in the following codes, the model will be wrapped in DataParallel()
+    # it means you need to change the model. to model.module
+    # for example, model.train_model --> model.module.train_model
+    #if torch.cuda.device_count() > 1:
+    #    print("Let's use", torch.cuda.device_count(), "GPUs!")
+    #    # dim = 0 [30, xxx] -> [10, ...], [10, ...], [10, ...] on 3 GPUs
+    #    model = torch.nn.DataParallel(model)
+    
+
     data_dir=args.dataset
     # Training dataset
     dataset_train = synthiaDataset()
