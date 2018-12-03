@@ -21,7 +21,7 @@ Compared with other PyTorch implementations, this repository has the following f
 ## Demo
 ### [Synthia Dataset](http://synthia-dataset.net/)
 
-<img src="assets/synthia2.jpeg" width="80%" height="80%">
+<img src="assets/2.png" width="80%" height="80%">
 
 ### [COCO dataset](http://cocodataset.org/#home)
 
