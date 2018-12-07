@@ -303,8 +303,7 @@ if __name__ == '__main__':
     
     # Train or evaluate
     if args.command == "train":
-        # Training dataset. Use the training set and 35K from the
-        # validation set, as as in the Mask RCNN paper.
+
 
         print(" Training Image Count: {}".format(len(dataset_train.image_ids)))
         print("Class Count: {}".format(dataset_train.num_classes))
