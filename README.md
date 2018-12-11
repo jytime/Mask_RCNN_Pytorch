@@ -15,6 +15,7 @@ Compared with other PyTorch implementations, this repository has the following f
 
 ## Requirements
 * Python 3
+* Linux
 * PyTorch 0.4.0
 * matplotlib, scipy, skimage, h5py, numpy
 
